@@ -1,0 +1,163 @@
+%-------------------------
+% Resume in Latex
+% Author : Bingpeng Xiang
+% License : MIT
+% Description: Modified from `https://github.com/sb2nov/resume`
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.linkedin.com/in/bingpeng-xiang/}{\Large Bingpeng Xiang}} & Email : \href{mailto:bx437@nyu.edu}{bx437@nyu.edu}\\
+  \href{Linkedin}{https://www.linkedin.com/in/bingpeng-xiang/} & Mobile : +1 929-319-1779 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {New York University}{Brooklyn, NY}
+      {Master in Computer Science;  GPA: 3.83}{Aug. 2018 -- May. 2020}
+    \resumeSubheading
+      {Tianjin University of Technology}{Tianjin, China}
+      {Bachelor of Science in Information and Computing Science;  GPA: 3.80}{Sept. 2014 -- July. 2018}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Tencent}{Shenzhen, China}
+      {Software Engineer Intern}{June. 2019 - Aug. 2019}
+      \resumeItemListStart
+        \resumeItem{}
+          {Optimize the worker's environment of the CI platform to support the customized languages, images, and OS.}
+        \resumeItem{}
+          {Offered CI integrated supported for the Tencent Cloud Virtual Machine Team, shortening the deployed time from 4 hours to 5 mins.}
+        \resumeItem{}
+          {Developed sign services for QQ video team at the CI platform and developed mobile app release services for Tencent Qidian at the CI platform.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Yuantek}{Beijing, China}
+      {Software Engineer Intern}{Jan 2014 - Oct 2016}
+      \resumeItemListStart
+        \resumeItem{}
+          {Deployed two python programs which were part of firewall project with the feature of auto-restarting on the crash, full record logging, running 24/7 and offering technical support.}
+        \resumeItem{}
+          {Rewrote C-based program that extracted IP field from proprietary protocol packet in Python which decreased the crash rate about 30 \% and reduced the code size about 50 \%. Besides, designed a Telnet command interface to provide a real-time data monitor with features of command completion, command history and subcommand.}
+        \resumeItem{}
+          {Developed a program to extract URLs matching the specific pattern from email. And completed a library to transfer TCP based packets with partner companies.}
+        \resumeItem{}
+          {Implemented a packet manipulation library for internal TLV format data communication protocols using custom metaclasses of Python, providing a unified interface to manually define every aspect of packets, dissect packets by parsing raw packet bytes and send/receive packets. }
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading{Oingo}{Sep. 2018 - Dec. 2018}{}{}
+        \resumeItemListStart
+            \resumeItem{}
+              {Developed a website using PHP Laravel that users can publish notes with certain locations, time range or tag and can receive these notes based on their custom filters, also supporting comments, adding friends, search by keyword, location.}
+            \resumeItem{}
+              {Designed database schema meeting 3NF and used GeoHash to store location to increase query efficiency. The database was deployed on AWS.}
+            \resumeItem{}
+              {Implemented compound filter supporting filtering by location, keyword, time range, tag, relationship, permission or personal status. The filter could also combine with boolean logic which could use for search several location or time in a single search.}
+        \resumeItemListEnd
+        
+    \resumeSubheading{Cloud DBMS of IoT for Smart Agriculture}{Mar.2018 - May.2018}{}{}
+        \resumeItemListStart
+            \resumeItem{}
+              {Designed IoT data management system including desktop App, server programs and virtual sensors which supported real-time data transfer and flexible sensor control.}
+            \resumeItem{}
+              {Built RESTful APIs using Flask which provided authentication, filter, CRUD and RPC.}
+            \resumeItem{}
+              {Designed special description files which defined the interface of sensors to improve extensibility, stored the current status and assigned the callback of specific events so as to increase control granularity.}
+            \resumeItem{}
+              {Developed a desktop app in Qt and virtual devices in Python to test the whole lifecycle including sending/receiving IoT data, remote sensor control, scheduling event and registering new devices.}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+% --------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+    \resumeItem{Languages}{: Python, Java, C++, PHP, SQL}
+    \resumeItem{Technologies}{: AWS, Git, React, Kafka, Bash, Regex}
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
