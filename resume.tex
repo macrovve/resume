@@ -44,28 +44,52 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
+\newcommand{\name}[2]{
+  \centerline{
+    \textbf{\Large\scshape{\href{#1}{#2}}} 
+    }
+  \vspace{1pt}
+}
+
+\newcommand{\contactInfo}[4]{
+  \centerline{\large{\ {#1} \textperiodcentered\ \ {#2} \textperiodcentered\ \ {#3}}}
+  \vspace{-5pt}
+}
+
+\newcommand{\generalEntry}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\entryWithKeyword}[2]{
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
 
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\generalEvent}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\eventWithDetail}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-3pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\eventListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\eventListEnd}{\end{itemize}}
+\newcommand{\entryListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\entryListEnd}{\end{itemize}\vspace{-5pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -74,89 +98,100 @@
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://www.linkedin.com/in/bingpeng-xiang/}{\Large Bingpeng Xiang}} & Email : \href{mailto:bx437@nyu.edu}{bx437@nyu.edu}\\
-  \href{Linkedin}{https://www.linkedin.com/in/bingpeng-xiang/} & Mobile : +1 929-319-1779 \\
-\end{tabular*}
-
+\name{https://www.linkedin.com/in/bingpeng-xiang/}{Bingpeng Xiang}
+\contactInfo{929-319-1779}{bx437@nyu.edu}{Brooklyn, NY}
 
 %-----------EDUCATION-----------------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
+  \eventListStart
+    \eventWithDetail
       {New York University}{Brooklyn, NY}
       {Master in Computer Science;  GPA: 3.83}{Aug. 2018 -- May. 2020}
-    \resumeSubheading
+    \eventWithDetail
       {Tianjin University of Technology}{Tianjin, China}
       {Bachelor of Science in Information and Computing Science;  GPA: 3.80}{Sept. 2014 -- July. 2018}
-  \resumeSubHeadingListEnd
+  \eventListEnd
 
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
-  \resumeSubHeadingListStart
+  \eventListStart
 
-    \resumeSubheading
+    \eventWithDetail
       {Tencent}{Shenzhen, China}
-      {Software Engineer Intern}{June. 2019 - Aug. 2019}
-      \resumeItemListStart
-        \resumeItem{}
-          {Optimize the worker's environment of the CI platform to support the customized languages, images, and OS.}
-        \resumeItem{}
-          {Offered CI integrated supported for the Tencent Cloud Virtual Machine Team, shortening the deployed time from 4 hours to 5 mins.}
-        \resumeItem{}
-          {Developed sign services for QQ video team at the CI platform and developed mobile app release services for Tencent Qidian at the CI platform.}
-      \resumeItemListEnd
+      {Software Engineer Intern, Continuous Integration(CI) Team}{June. 2019 - Aug. 2019}
+      \entryListStart
+        \generalEntry
+          {Optimized the CI runner's dev environment to support customized languages, container, and OS.
+          Optimized the CI runner's runtime environment from only support one languages
+          自定义编译机，自定义虚拟机，自定义开发环境，}
+        \generalEntry
+          {Implemented multiple plugins to integrate other internal platform including git platform, deployment platform, Windows and iOS software sign service, and Android and iOS close alpha service}
+        \generalEntry
+          {Collaborated with Tencent Cloud Virtual Machine Team to developed CI workflows which shorten release cycle time from 5 hours to 1 hours. Also developed the CI workflow for Tencent Video software release}
+      \entryListEnd
 
-    \resumeSubheading
+    \eventWithDetail
       {Yuantek}{Beijing, China}
-      {Software Engineer Intern}{Jan 2014 - Oct 2016}
-      \resumeItemListStart
-        \resumeItem{}
+      {Software Engineer Intern, Traffic Analysis Team}{Jan. 2014 - Oct. 2016}
+      \entryListStart
+        \generalEntry
           {Deployed two python programs which were part of firewall project with the feature of auto-restarting on the crash, full record logging, running 24/7 and offering technical support.}
-        \resumeItem{}
+        \generalEntry
           {Rewrote C-based program that extracted IP field from proprietary protocol packet in Python which decreased the crash rate about 30 \% and reduced the code size about 50 \%. Besides, designed a Telnet command interface to provide a real-time data monitor with features of command completion, command history and subcommand.}
-        \resumeItem{}
+        \generalEntry
           {Developed a program to extract URLs matching the specific pattern from email. And completed a library to transfer TCP based packets with partner companies.}
-        \resumeItem{}
+        \generalEntry
           {Implemented a packet manipulation library for internal TLV format data communication protocols using custom metaclasses of Python, providing a unified interface to manually define every aspect of packets, dissect packets by parsing raw packet bytes and send/receive packets. }
-      \resumeItemListEnd
+      \entryListEnd
+      
+    \eventWithDetail
+        {Tianjin University of Technology}{Tianjin, China}
+        {Research Assistant, Data Management Software for Smart Agriculture}{Dec. 2017 - May. 2018}
+        \entryListStart
+            \generalEntry
+                {Designed IoT data management system including desktop App, server programs and virtual sensors which supported real-time data transfer and flexible sensor control.}
+            \generalEntry
+                {Built RESTful APIs using Flask which provided authentication, filter, CRUD and RPC.}
+            \generalEntry
+                {Designed special description files which defined the interface of sensors to improve extensibility, stored the current status and assigned the callback of specific events so as to increase control granularity.}
+            \generalEntry
+                {Developed a desktop app in Qt and virtual devices in Python to test the whole lifecycle including sending/receiving IoT data, remote sensor control, scheduling event and registering new devices.}
+        \entryListEnd
 
-  \resumeSubHeadingListEnd
+  \eventListEnd
 
 
 %-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubheading{Oingo}{Sep. 2018 - Dec. 2018}{}{}
-        \resumeItemListStart
-            \resumeItem{}
-              {Developed a website using PHP Laravel that users can publish notes with certain locations, time range or tag and can receive these notes based on their custom filters, also supporting comments, adding friends, search by keyword, location.}
-            \resumeItem{}
+\section{Project}
+  \eventListStart
+    \generalEvent
+      {Oingo}{Sep. 2018 - Dec. 2018}
+      \entryListStart
+        \generalEntry
+            {Developed a website using PHP Laravel that users can publish notes with certain locations, time range or tag and can receive these notes based on their custom filters, also supporting comments, adding friends, search by keyword, location.}
+        \generalEntry
               {Designed database schema meeting 3NF and used GeoHash to store location to increase query efficiency. The database was deployed on AWS.}
-            \resumeItem{}
+        \generalEntry
               {Implemented compound filter supporting filtering by location, keyword, time range, tag, relationship, permission or personal status. The filter could also combine with boolean logic which could use for search several location or time in a single search.}
-        \resumeItemListEnd
-        
-    \resumeSubheading{Cloud DBMS of IoT for Smart Agriculture}{Mar.2018 - May.2018}{}{}
-        \resumeItemListStart
-            \resumeItem{}
-              {Designed IoT data management system including desktop App, server programs and virtual sensors which supported real-time data transfer and flexible sensor control.}
-            \resumeItem{}
-              {Built RESTful APIs using Flask which provided authentication, filter, CRUD and RPC.}
-            \resumeItem{}
-              {Designed special description files which defined the interface of sensors to improve extensibility, stored the current status and assigned the callback of specific events so as to increase control granularity.}
-            \resumeItem{}
-              {Developed a desktop app in Qt and virtual devices in Python to test the whole lifecycle including sending/receiving IoT data, remote sensor control, scheduling event and registering new devices.}
-        \resumeItemListEnd
-  \resumeSubHeadingListEnd
+        \entryListEnd
+    \generalEvent
+        {Analysis of Automatic Identification System (AIS) Reports}{Oct. 2017 - Jun. 2018}
+        \entryListStart
+            \generalEntry{Implemented a Python library for handling AIS report including encoding and decoding sentence or messages. }
+            \generalEntry{Boosted parsing speed about 10 times through replacing part of core function by C and adding cache. }
+            \generalEntry{Developed AIS report analyze tools that supported classifying messages, detecting abuse of common channel and wrong format reports, which were adopted by Tianjin Maritime Safety Administration.}
+        \entryListEnd
+    \entryWithKeyword{Web Crawler}{A event driven, multi-thread, easy configuration web crawler which will be a part of web search engine.}
+  \eventListEnd
+  
 
 % --------PROGRAMMING SKILLS------------
 \section{Programming Skills}
- \resumeSubHeadingListStart
-    \resumeItem{Languages}{: Python, Java, C++, PHP, SQL}
-    \resumeItem{Technologies}{: AWS, Git, React, Kafka, Bash, Regex}
- \resumeSubHeadingListEnd
+ \eventListStart
+    \entryWithKeyword{Languages}{Python, Java, C++, PHP, SQL, Javascript}
+    \entryWithKeyword{Technologies}{AWS, Git, Vue.js, Kafka, Bash, Regex, HTML, Docker, Markdown, MySQL}
+ \eventListEnd
 
 
 %-------------------------------------------
