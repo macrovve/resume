@@ -118,17 +118,16 @@
   \eventListStart
 
     \eventWithDetail
+    % good
       {Tencent}{Shenzhen, China}
       {Software Engineer Intern, Continuous Integration(CI) Team}{June. 2019 - Aug. 2019}
       \entryListStart
         \generalEntry
-          {Optimized the CI runner's dev environment to support customized languages, container, and OS.
-          Optimized the CI runner's runtime environment from only support one languages
-          自定义编译机，自定义虚拟机，自定义开发环境，}
+          {Optimized the run-time environment of the CI runner to support customized language, container, and OS.}
         \generalEntry
-          {Implemented multiple plugins to integrate other internal platform including git platform, deployment platform, Windows and iOS software sign service, and Android and iOS close alpha service}
+          {Implemented multiple plugins to integrate other internal platforms including git platform, deployment platform, Windows and iOS software sign service, and Android and iOS close alpha service.}
         \generalEntry
-          {Collaborated with Tencent Cloud Virtual Machine Team to developed CI workflows which shorten release cycle time from 5 hours to 1 hours. Also developed the CI workflow for Tencent Video software release}
+          {Collaborated with Tencent Cloud Virtual Machine Team to develop CI workflows which shorten the release cycle time from 5 hours to 1 hour. Also developed the release workflow for Tencent Video software.}
       \entryListEnd
 
     \eventWithDetail
@@ -136,13 +135,15 @@
       {Software Engineer Intern, Traffic Analysis Team}{Jan. 2014 - Oct. 2016}
       \entryListStart
         \generalEntry
-          {Deployed two python programs which were part of firewall project with the feature of auto-restarting on the crash, full record logging, running 24/7 and offering technical support.}
+            {Implemented a packet manipulation library using metaclasses in Python, which is able to encode/decode packets of whole company-wide communication protocols based on the declaration.}
         \generalEntry
-          {Rewrote C-based program that extracted IP field from proprietary protocol packet in Python which decreased the crash rate about 30 \% and reduced the code size about 50 \%. Besides, designed a Telnet command interface to provide a real-time data monitor with features of command completion, command history and subcommand.}
+            {Designed a Telnet command interface to provide a run-time monitor with features of command completion, command history, and subcommand.}
         \generalEntry
-          {Developed a program to extract URLs matching the specific pattern from email. And completed a library to transfer TCP based packets with partner companies.}
+            {Refactored the legacy IP extraction program in Python to support run-time monitor, crash recovery, and also decreased the crash rate about 30 \%.}
         \generalEntry
-          {Implemented a packet manipulation library for internal TLV format data communication protocols using custom metaclasses of Python, providing a unified interface to manually define every aspect of packets, dissect packets by parsing raw packet bytes and send/receive packets. }
+            {Developed a 24/7 service to extract URLs matching the specific pattern from email and transferred to the partner companies which had over 99.9 \% reliability. }
+
+          
       \entryListEnd
       
     \eventWithDetail
@@ -150,13 +151,13 @@
         {Research Assistant, Data Management Software for Smart Agriculture}{Dec. 2017 - May. 2018}
         \entryListStart
             \generalEntry
-                {Designed IoT data management system including desktop App, server programs and virtual sensors which supported real-time data transfer and flexible sensor control.}
+                {Designed fully managed service with two researchers, which allows us to connect, manage, and ingest data from agriculture sensors. }
             \generalEntry
-                {Built RESTful APIs using Flask which provided authentication, filter, CRUD and RPC.}
+                {Built RESTful APIs using the Flask framework in Python which provided authentication, filter, CRUD endpoints.}
             \generalEntry
-                {Designed special description files which defined the interface of sensors to improve extensibility, stored the current status and assigned the callback of specific events so as to increase control granularity.}
+                {Developed a desktop app using Qt in C++ which enables users to analyze, visualize IoT data in real time, and configures custom alerts and triggers to monitor any environmental change.}
             \generalEntry
-                {Developed a desktop app in Qt and virtual devices in Python to test the whole lifecycle including sending/receiving IoT data, remote sensor control, scheduling event and registering new devices.}
+                {Improved the extensibility and control granularity of the sensor by designing special description file.}
         \entryListEnd
 
   \eventListEnd
@@ -169,20 +170,14 @@
       {Oingo}{Sep. 2018 - Dec. 2018}
       \entryListStart
         \generalEntry
-            {Developed a website using PHP Laravel that users can publish notes with certain locations, time range or tag and can receive these notes based on their custom filters, also supporting comments, adding friends, search by keyword, location.}
+            {Developed a note share website using the Laravel framework in PHP. The users are able to publish notes linking to certain locations, date-time or tag. Their friends could receive the notes based on their custom filters. It also supports comments, friend management, and note search.}
         \generalEntry
-              {Designed database schema meeting 3NF and used GeoHash to store location to increase query efficiency. The database was deployed on AWS.}
+            {Increased query efficiency by using Geohash to store location and designing a special scheme to store repeated event information.}
         \generalEntry
-              {Implemented compound filter supporting filtering by location, keyword, time range, tag, relationship, permission or personal status. The filter could also combine with boolean logic which could use for search several location or time in a single search.}
+            {Improved search relevance by adding more filter measures and supporting And/Or Operators. }
         \entryListEnd
-    \generalEvent
-        {Analysis of Automatic Identification System (AIS) Reports}{Oct. 2017 - Jun. 2018}
-        \entryListStart
-            \generalEntry{Implemented a Python library for handling AIS report including encoding and decoding sentence or messages. }
-            \generalEntry{Boosted parsing speed about 10 times through replacing part of core function by C and adding cache. }
-            \generalEntry{Developed AIS report analyze tools that supported classifying messages, detecting abuse of common channel and wrong format reports, which were adopted by Tianjin Maritime Safety Administration.}
-        \entryListEnd
-    \entryWithKeyword{Web Crawler}{A event driven, multi-thread, easy configuration web crawler which will be a part of web search engine.}
+    \entryWithKeyword{AIS Message Parser}{A Python library to encode/decode AIS message, the core is written in C to acceleration.}
+    \entryWithKeyword{Web Search Engine}{My own search engine, one of the course project, but still work in progress.}
   \eventListEnd
   
 
@@ -190,7 +185,7 @@
 \section{Programming Skills}
  \eventListStart
     \entryWithKeyword{Languages}{Python, Java, C++, PHP, SQL, Javascript}
-    \entryWithKeyword{Technologies}{AWS, Git, Vue.js, Kafka, Bash, Regex, HTML, Docker, Markdown, MySQL}
+    \entryWithKeyword{Technologies}{Git, Vue.js, Vim, Bash, Regex, HTML, Docker, Markdown, MySQL, AWS}
  \eventListEnd
 
 
