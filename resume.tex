@@ -80,7 +80,16 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-3pt}
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\eventWithMoreDetail}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} \\
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\eventListStart}{\begin{itemize}[leftmargin=*]}
@@ -104,9 +113,10 @@
 %-----------EDUCATION-----------------
 \section{Education}
   \eventListStart
-    \eventWithDetail
+    \eventWithMoreDetail
       {New York University}{Brooklyn, NY}
       {Master in Computer Science;  GPA: 3.83}{Aug. 2018 -- May. 2020}
+      {Current TA for CS6083 Principle of Database System}
     \eventWithDetail
       {Tianjin University of Technology}{Tianjin, China}
       {Bachelor of Science in Information and Computing Science;  GPA: 3.80}{Sep. 2014 -- Jul. 2018}
@@ -127,7 +137,7 @@
         \generalEntry
           {Implemented multiple plugins to integrate other internal platforms including git platform, deployment platform, Windows and iOS software sign service, and Android and iOS close alpha service.}
         \generalEntry
-          {Collaborated with Tencent Cloud Virtual Machine Team to develop CI workflows which shorten the release cycle time from 5 hours to 1 hour. Also developed the release workflow for Tencent Video software.}
+          {Collaborated with Tencent Cloud Virtual Machine Team to develop CI workflows which shorten the release cycle time from 5 hours to 1 hour. Also developed a release workflow for Tencent Video software.}
       \entryListEnd
 
     \eventWithDetail
@@ -135,7 +145,7 @@
       {Software Engineer Intern, Traffic Analysis Team}{Apr. 2018 - Jun. 2018}
       \entryListStart
         \generalEntry
-            {Implemented a declarative packet manipulation library using metaclasses in Python, which is able to encode/decode packets of whole company-wide communication protocols}
+            {Implemented a declarative packet manipulation library using metaclasses in Python, which is able to encode/decode packets of whole company-wide communication protocols.}
         \generalEntry
             {Designed a Telnet command interface to provide a run-time monitor with features of command completion, command history, and subcommand.}
         \generalEntry
@@ -167,7 +177,7 @@
 \section{Project}
   \eventListStart
     \generalEvent
-      {Oingo}{Sep. 2018 - Dec. 2018}
+      {Oingo}{}
       \entryListStart
         \generalEntry
             {Developed a note share website using the Laravel framework in PHP. The users are able to publish notes linking to certain locations, date-time or tag. Their friends could receive the notes based on their custom filters. It also supports comments, friend management, and note search.}
