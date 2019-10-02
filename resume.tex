@@ -83,12 +83,12 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\eventWithMoreDetail}[5]{
+\newcommand{\eventWithMoreDetail}[6]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-      \textit{\small#5} \\
+      \textit{\small#5} & \textit{\small #6} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -116,7 +116,7 @@
     \eventWithMoreDetail
       {New York University}{Brooklyn, NY}
       {Master in Computer Science;  GPA: 3.83}{Aug. 2018 -- May. 2020}
-      {Current TA for CS6083 Principles of Database Systems}
+      {TA for CS6083 Principles of Database Systems}{Feb. 2019 -- Dec. 2019}
     \eventWithDetail
       {Tianjin University of Technology}{Tianjin, China}
       {Bachelor of Science in Information and Computing Science;  GPA: 3.80}{Sep. 2014 -- Jul. 2018}
@@ -188,6 +188,8 @@
             {Increased query efficiency by using Geohash to store location and designing a special scheme to store repeated event information.}
         \generalEntry
             {Improved search relevance by adding more filter measures and supporting And/Or Operators. }
+        \generalEntry
+            {Visualized the note in the map to enhance the user experience by introducing Google Map API.}
         \entryListEnd
     \entryWithKeyword{AIS Message Parser}{A Python library to encode/decode AIS message, the parse core is written in C to acceleration.}
     \entryWithKeyword{Web Search Engine}{My own search engine, one of the course projects, but still work in progress.}
